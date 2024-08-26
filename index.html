@@ -31,30 +31,43 @@
       <p>
         This is not a real online service! You know you need something like this
         in your life to help you realize your deepest dreams.<br>Sign up
-        <em>now</em> to get started.<br><br><br>You know you want to.
+        <em>now</em> to get started.<br><br>You know you want to.
       </p>
       <form action="#" method="post">
-        <fieldset>
-          <legend>Let's do this!</legend>
-          <p>
-            <label for="first-name">FIRST NAME</label>
-            <input id="first-name" name="first-name" type="text">
-            <label for="last-name">LAST NAME</label>
-            <input id="last-name" name="last-name" type="text">
-          </p>
-          <p>
-            <label for="email">EMAIL</label>
-            <input id="email" name="email" type="email">
-            <label for="phone">PHONE NUMBER</label>
-            <input id="phone" name="phone" type="tel">
-          </p>
-          <p>
-            <label for="pwd">PASSWORD</label>
-            <input id="pwd" name="pwd" type="password">
-            <label for="confirm-pwd">CONFIRM PASSWORD</label>
-            <input id="confirm-pwd" type="password">
-          </p>
-        </fieldset>
+        <div class="container">
+          <p>Let's do this!</p>
+          <fieldset>
+            <p>
+              <label for="first-name">FIRST NAME</label>
+              <input id="first-name" name="first-name" type="text">
+            </p>
+            <p>
+              <label for="last-name">LAST NAME</label>
+              <input id="last-name" name="last-name" type="text">
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="email">EMAIL</label>
+              <input id="email" name="email" type="email">
+            </p>
+            <p>
+              <label for="phone">PHONE NUMBER</label>
+              <input id="phone" name="phone" type="tel">
+            </p>
+          </fieldset>
+          <fieldset>
+            <p>
+              <label for="pwd">PASSWORD</label>
+              <input required id="pwd" name="pwd" type="password" minlength="6">
+              <span class="error">* Passwords do not match</span>
+            </p>
+            <p>
+              <label for="confirm-pwd">CONFIRM PASSWORD</label>
+              <input required id="confirm-pwd" type="password" minlength="6">
+            </p>
+          </fieldset>
+        </div>
         <button type="submit">Create Account</button>
         <p>Already have an account? <a href="#">Log in</a></p>
       </form>
