@@ -12,14 +12,30 @@
 }
 
 :root {
-  --primary-ff: Tahoma;
+  --primary-ff: Arial;
   --secondary-ff: "norse-bold";
 
   --font-size: 1.5rem;
+  --primary-font-color: #000;
+  --secondary-font-color: #fff;
+  --link-font-color: #596d48;
+
+  --primary-bg-color: #eff2f7;
+  --secondary-bg-color: #fff;
+
+  --button-bg-color: #596d48;
+
+  --border-color: #e5e7eb;
+  --focus-color: #00f;
+  --invalid-color: #f00;
+
+  --border: 2px solid var(--border-color);
+  --padding-left: 4rem;
 }
 
 body {
   display: flex;
+  color: var(--primary-font-color);
   font-family: var(--primary-ff);
   font-size: var(--font-size);
   font-weight: 400;
@@ -27,10 +43,10 @@ body {
   line-height: 1.5;
 }
 
-body > div { 
+body > div {
   background: center url("./images/halie-west-25xggax4bSA-unsplash.jpg");
   background-size: cover;
-  color: #fff;
+  color: var(--secondary-font-color);
   position: relative;
   width: 30%;
 }
@@ -62,5 +78,94 @@ body > div {
 }
 
 #logo + p :any-link {
-  color: #fff;
+  color: var(--secondary-font-color);
+}
+
+main {
+  background: var(--primary-bg-color);
+  width: 100%;
+  text-align: justify;
+  font-weight: 600;
+}
+
+main > p {
+  width: 60%;
+  padding-left: var(--padding-left);
+  margin-bottom: 2rem;
+  height: 22.5vh;
+  margin-top: 100px;
+}
+
+.container > p {
+  margin: -20px 0 0;
+}
+
+.container {
+  background: var(--secondary-bg-color);
+  padding-left: var(--padding-left);
+  height: 32vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6%;
+  box-shadow: 0 5px 10px lightgray;
+}
+
+.container > fieldset > p {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.container > fieldset {
+  border: none;
+  display: flex;
+  gap: 5%;
+}
+
+form > button {
+  background-color: #596d48;
+  padding: 1em 4em;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--secondary-font-color);
+  border: none;
+  border-radius: 6px;
+  margin: 2.5rem 0 2.5rem 4rem;
+}
+
+form > button + p {
+  padding-left: var(--padding-left);
+  font-size: 1rem;
+}
+
+form > button + p :any-link {
+  color: var(--link-font-color);
+  text-decoration: none;
+}
+
+label {
+  font-size: 0.8rem;
+}
+input {
+  outline: none;
+  height: 32px;
+  border: var(--border);
+  border-radius: 4px;
+}
+
+input:focus {
+  border-color: var(--focus-color);
+  box-shadow: 0 0 10px var(--border-color);
+}
+
+input:invalid {
+  border-color: var(--invalid-color);
+  box-shadow: 0 0 10px var(--border-color);
+}
+
+.error {
+  color: var(--invalid-color);
+  font-size: 0.8rem;
+  font-weight: 400;
 }
