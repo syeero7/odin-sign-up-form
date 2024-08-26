@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "norse-bold";
+  src: url("./font/norse-bold-webfont.woff2");
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-ff: Tahoma;
+  --secondary-ff: "norse-bold";
+
+  --font-size: 1.5rem;
+}
+
+body {
+  display: flex;
+  font-family: var(--primary-ff);
+  font-size: var(--font-size);
+  font-weight: 400;
+  height: 100vh;
+  line-height: 1.5;
+}
+
+body > div { 
+  background: center url("./images/halie-west-25xggax4bSA-unsplash.jpg");
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  width: 30%;
+}
+
+#logo {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  font-family: var(--secondary-ff);
+  font-size: 4em;
+  height: 150px;
+  justify-content: center;
+  position: absolute;
+  top: 200px;
+  width: 100%;
+}
+
+#logo > img {
+  height: 125px;
+  width: 100px;
+}
+
+#logo + p {
+  bottom: 10px;
+  font-size: 0.8rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+#logo + p :any-link {
+  color: #fff;
+}
